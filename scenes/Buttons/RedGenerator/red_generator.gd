@@ -1,5 +1,5 @@
 extends TextureButton
-
+var bloquerojo = preload("res://scenes/Blocks/Red/BlockRed.tscn")
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
@@ -9,7 +9,11 @@ func _ready():
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
 	pass
-
+func generate_block():
+	var instanciarbloque = bloquerojo.instantiate()
+	add_child(instanciarbloque)
+	pass
 
 func _on_button_down():
+	generate_block()
 	pass # Replace with function body.
