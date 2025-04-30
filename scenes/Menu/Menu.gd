@@ -13,8 +13,8 @@ func _ready():
 	pass
 func count_new_instance():
 	instancesCount += 1
-	$CountLabel.text = str(instancesCount)
+	$CountLabel.text =INSTANCES_TEXT + str(instancesCount)
 	pass
 func delete():
-	count_new_instance().instancesCount = 0
-	$CountLabel.text = INSTANCES_TEXT
+	instancesCount = 0
+	$CountLabel.text = INSTANCES_TEXT + str(instancesCount)
